@@ -1,5 +1,5 @@
 ﻿/*
- * HmAnthropicClaudeWeb v 1.0.0.4
+ * HmAnthropicClaudeWeb v 1.0.0.5
  *
  * Copyright (c) 2025 Akitsugu Komiyama
  * under the MIT License
@@ -14,7 +14,7 @@ js {
 
 // ------------- 会話エンジンの設定項目 -------------
 
-const baseUrl = "https://claude.ai/";
+const baseUrl = "https://claude.ai";
 
 const renderPaneCustomParam = {
     place: "rightside",            // leftside | rightside | upside | downside
@@ -36,15 +36,17 @@ eval(script);
 function returnMinimumWindowSize() {
     if (renderPaneCustomParam.size < 900) {
         return {size:900};
-    } else {
-        return {};
     }
+    
+    return {};
 }
+
+const newConvBaseUrl = `${baseUrl}/new`; // 新ウィンドウ時の時のURL
 
 // Claude は１回目だけ https://claude.ai/new で、2回目以降は https://claude.ai/chat と別URLになる珍しいパターン
 // 最低サイズがある程度ないと、Claudeは入力欄(input)に自動的に焦点が合わない。
 function firstParamDecorator(baseUrl, text) {
-    return { ...{ url: baseUrl + "new"}, ...returnMinimumWindowSize() };
+    return { ...{ url: newConvBaseUrl }, ...returnMinimumWindowSize() };
 }
 
 // 最低サイズがある程度ないと、Claudeは入力欄(input)に自動的に焦点が合わない。
@@ -58,8 +60,8 @@ function waitBrowserPaneDecorator(status) {
         get: "url"
     });
 
-    // 完了していて、かつ URLが/newの時だけ、1200待ち
-    if (status == "complete" && url.indexOf("/new") > 0) {
+    // DOMContentLoaded相当にcompleteしていて、かつ URLが/newの時だけ、1200待ち
+    if (status == "complete" && url.indexOf(newConvBaseUrl) > 0) {
         return 1200;
     }
     
