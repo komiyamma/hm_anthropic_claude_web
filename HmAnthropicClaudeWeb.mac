@@ -1,0 +1,65 @@
+﻿/*
+ * HmAnthropicClaudeWeb v 1.0.0.4
+ *
+ * Copyright (c) 2025 Akitsugu Komiyama
+ * under the MIT License
+ */
+
+
+hidemaruversion "9.39.99";
+
+jsmode  @"WebView2\HmAnthropicClaudeWeb";
+
+js {
+
+// ------------- 会話エンジンの設定項目 -------------
+
+const baseUrl = "https://claude.ai/";
+
+const renderPaneCustomParam = {
+    place: "rightside",            // leftside | rightside | upside | downside
+    size: 650,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
+                                   // Claudeのサイトに限っては、650以上の幅があることが必要。450なども指定した場合でも一瞬は幅が広くなる。
+};
+
+const isOneAtTimeAIRenderPane = 1; // AI関連のレンダリング枠は(他の種類のAIも含め)１つだけにする。(複数起動しそうになると、前のものが閉じる）
+
+// --------------------------------------------------
+
+const renderPaneTargetName = "HmAnthropicClaudeWeb";
+    
+const currentMacroDirectory = currentmacrodirectory();
+
+const script = hidemaru.loadTextFile(currentMacroDirectory + "\\HmConvAIWeb.js");
+eval(script);
+
+function returnMinimumWindowSize() {
+    if (renderPaneCustomParam.size < 650) {
+        return {target:"_each", size:650};
+    } else {
+        return {};
+    }
+}
+
+// 最低サイズがある程度ないと、Claudeは入力欄(input)に自動的に焦点が合わない。
+function firstParamDecorator(baseUrl, text) {
+    return returnMinimumWindowSize();
+}
+
+// ２回目以降に、ChatGPTの返答等を選択した状態で質問した時の挙動が不安感があるので、リフレッシュもしておく。
+// 最低サイズがある程度ないと、ChatGPTは「リターンキー」では送信できない。
+function secondParamDecorator(baseUrl, text) {
+    return returnMinimumWindowSize();
+}
+
+function onEndMacroDecorator() {
+    timeHandleOfDoMain = hidemaru.setTimeout( () => {
+        const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
+        browserpanecommand(browserPaneMixParam);
+    }, 500);
+}
+
+
+doMain();
+
+}

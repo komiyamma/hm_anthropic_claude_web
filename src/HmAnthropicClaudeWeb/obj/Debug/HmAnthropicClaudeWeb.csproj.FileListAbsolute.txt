@@ -1,0 +1,4 @@
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Debug\HmAnthropicClaudeWeb.csproj.AssemblyReference.cache
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Debug\HmAnthropicClaudeWeb.csproj.CoreCompileInputs.cache
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\bin\Debug\HmAnthropicClaudeWeb.dll
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Debug\HmAnthropicClaudeWeb.dll

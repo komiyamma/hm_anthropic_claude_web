@@ -1,0 +1,6 @@
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\bin\Release\HmAnthropicClaudeWeb.dll
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\bin\Release\HmAnthropicClaudeWeb.pdb
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.csproj.AssemblyReference.cache
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.csproj.CoreCompileInputs.cache
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.dll
+C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.pdb
