@@ -41,6 +41,7 @@ function returnMinimumWindowSize() {
     }
 }
 
+// Claude は１回目だけ https://claude.ai/new で、2回目以降は https://claude.ai/chat と別URLになる珍しいパターン
 // 最低サイズがある程度ないと、Claudeは入力欄(input)に自動的に焦点が合わない。
 function firstParamDecorator(baseUrl, text) {
     return { ...{ url: baseUrl + "new"}, ...returnMinimumWindowSize() };
@@ -51,26 +52,21 @@ function secondParamDecorator(baseUrl, text) {
     return returnMinimumWindowSize();
 }
 
-/*
 function waitBrowserPaneDecorator(status) {
     const url = browserpanecommand({
         target: "_each",
         get: "url"
     });
 
-debuginfo(2);
-console.log(url);
-    // 完了していて、かつ URLが/newの時だけ、4000待ち
+    // 完了していて、かつ URLが/newの時だけ、1200待ち
     if (status == "complete" && url.indexOf("/new") > 0) {
-console.log("きた");
-        return 1500;
+        return 1200;
     }
     
-console.log("こない");
     // 他はかわらず
     return 0;
 }
-*/
+
 function onEndMacroDecorator() {
     timeHandleOfDoMain = hidemaru.setTimeout( () => {
         const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
