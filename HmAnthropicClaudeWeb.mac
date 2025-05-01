@@ -18,8 +18,8 @@ const baseUrl = "https://claude.ai/";
 
 const renderPaneCustomParam = {
     place: "rightside",            // leftside | rightside | upside | downside
-    size: 650,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
-                                   // Claudeのサイトに限っては、650以上の幅があることが必要。450なども指定した場合でも一瞬は幅が広くなる。
+    size: 900,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
+                                   // Claudeのサイトに限っては、900以上の幅があることが必要。450なども指定した場合でも一瞬は幅が広くなる。
 };
 
 const isOneAtTimeAIRenderPane = 1; // AI関連のレンダリング枠は(他の種類のAIも含め)１つだけにする。(複数起動しそうになると、前のものが閉じる）
@@ -34,8 +34,8 @@ const script = hidemaru.loadTextFile(currentMacroDirectory + "\\HmConvAIWeb.js")
 eval(script);
 
 function returnMinimumWindowSize() {
-    if (renderPaneCustomParam.size < 650) {
-        return {target:"_each", size:650};
+    if (renderPaneCustomParam.size < 900) {
+        return {size:900};
     } else {
         return {};
     }
@@ -43,15 +43,34 @@ function returnMinimumWindowSize() {
 
 // 最低サイズがある程度ないと、Claudeは入力欄(input)に自動的に焦点が合わない。
 function firstParamDecorator(baseUrl, text) {
-    return returnMinimumWindowSize();
+    return { ...{ url: baseUrl + "new"}, ...returnMinimumWindowSize() };
 }
 
-// ２回目以降に、ChatGPTの返答等を選択した状態で質問した時の挙動が不安感があるので、リフレッシュもしておく。
-// 最低サイズがある程度ないと、ChatGPTは「リターンキー」では送信できない。
+// 最低サイズがある程度ないと、Claudeは入力欄(input)に自動的に焦点が合わない。
 function secondParamDecorator(baseUrl, text) {
     return returnMinimumWindowSize();
 }
 
+/*
+function waitBrowserPaneDecorator(status) {
+    const url = browserpanecommand({
+        target: "_each",
+        get: "url"
+    });
+
+debuginfo(2);
+console.log(url);
+    // 完了していて、かつ URLが/newの時だけ、4000待ち
+    if (status == "complete" && url.indexOf("/new") > 0) {
+console.log("きた");
+        return 1500;
+    }
+    
+console.log("こない");
+    // 他はかわらず
+    return 0;
+}
+*/
 function onEndMacroDecorator() {
     timeHandleOfDoMain = hidemaru.setTimeout( () => {
         const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
