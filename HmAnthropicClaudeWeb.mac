@@ -41,7 +41,7 @@ function returnMinimumWindowSize() {
     return {};
 }
 
-const newConvBaseUrl = `${baseUrl}/new`; // 新ウィンドウ時の時のURL
+const newConvBaseUrl = `${baseUrl}/new`; // 新ウィンドウ時のURL
 
 // Claude は１回目だけ https://claude.ai/new で、2回目以降は https://claude.ai/chat と別URLになる珍しいパターン
 // 最低サイズがある程度ないと、Claudeは入力欄(input)に自動的に焦点が合わない。
