@@ -1,5 +1,5 @@
 ﻿/*
- * HmAnthropicClaudeWeb v 1.0.0.7
+ * HmAnthropicClaudeWeb v 1.0.0.8
  *
  * Copyright (c) 2025 Akitsugu Komiyama
  * under the MIT License
@@ -54,20 +54,6 @@ function firstParamDecorator(baseUrl, text) {
 function secondParamDecorator(baseUrl, text) {
     browserpanecommand({target:"_each", "refresh":1});
     return returnMinimumWindowSize();
-}
-
-function waitBrowserPaneDecorator(status) {
-    const url = browserpanecommand({
-        target: "_each",
-        get: "url"
-    });
-
-    // DOMContentLoaded相当にcompleteしていて、かつ URLが/newの時だけ、1.2秒待ち
-    // ブラウザにとってはロード完了になってても、Claude にとって準備完了になっていない。
-    // 他のAI会話サイトと比べてclaude.aiのサイトは設計がやや悪い。
-    if (status == "complete" && url.indexOf(newConvBaseUrl) >= 0) {
-        return 1200;
-    }
 }
 
 function onEndMacroDecorator() {
