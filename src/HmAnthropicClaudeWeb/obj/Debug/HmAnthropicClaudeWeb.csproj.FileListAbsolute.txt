@@ -2,3 +2,7 @@ C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Debug
 C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Debug\HmAnthropicClaudeWeb.csproj.CoreCompileInputs.cache
 C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\bin\Debug\HmAnthropicClaudeWeb.dll
 C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Debug\HmAnthropicClaudeWeb.dll
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\bin\Debug\HmAnthropicClaudeWeb.dll
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\obj\Debug\HmAnthropicClaudeWeb.csproj.AssemblyReference.cache
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\obj\Debug\HmAnthropicClaudeWeb.csproj.CoreCompileInputs.cache
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\obj\Debug\HmAnthropicClaudeWeb.dll

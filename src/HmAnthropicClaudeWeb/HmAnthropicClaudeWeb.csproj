@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Additional.cs" />
     <Compile Include="ClipBoard.cs" />
     <Compile Include="HmAnthropicClaudeWeb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

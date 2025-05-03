@@ -4,3 +4,9 @@ C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Relea
 C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.csproj.CoreCompileInputs.cache
 C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.dll
 C:\Users\master\source\repos\HmAnthropicClaudeWeb\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.pdb
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\bin\Release\HmAnthropicClaudeWeb.dll
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\bin\Release\HmAnthropicClaudeWeb.pdb
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.csproj.AssemblyReference.cache
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.csproj.CoreCompileInputs.cache
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.dll
+G:\repogitory\hm_anthropic_claude_web\src\HmAnthropicClaudeWeb\obj\Release\HmAnthropicClaudeWeb.pdb

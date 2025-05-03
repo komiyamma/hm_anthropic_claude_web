@@ -27,7 +27,7 @@ const isOneAtTimeAIRenderPane = 1; // AI関連のレンダリング枠は(他の
 // --------------------------------------------------
 
 const renderPaneTargetName = "HmAnthropicClaudeWeb";
-    
+
 const currentMacroDirectory = currentmacrodirectory();
 
 const script = hidemaru.loadTextFile(currentMacroDirectory + "\\HmConvAIWeb.js");
@@ -37,7 +37,7 @@ function returnMinimumWindowSize() {
     if (renderPaneCustomParam.size < 900) {
         return {size:900};
     }
-    
+
     return {};
 }
 
@@ -52,8 +52,18 @@ function firstParamDecorator(baseUrl, text) {
 // 最低サイズがある程度ないと、Claudeは入力欄(input)に自動的に焦点が合わない。
 // ２回目以降に、Claudeの返答等を選択した状態で質問した時の挙動が不安感があるので、リフレッシュもしておく。
 function secondParamDecorator(baseUrl, text) {
-    browserpanecommand({target:"_each", "refresh":1});
+    // browserpanecommand({target:"_each", "refresh":1});
     return returnMinimumWindowSize();
+}
+
+function onPrevKeySendDecorator() {
+    try {
+        const url = browserpanecommand({target:"_each", get:"url"});
+        if (url != newConvBaseUrl) {
+            com.SendShiftEscSlashDelSync();
+        }
+    } catch(e) {
+    }
 }
 
 doMain();
