@@ -52,8 +52,18 @@ public partial class HmAnthropicClaudeWeb
         // スラッシュキーを解放
         keybd_event(VK_SLASH, 0, KEYEVENTF_KEYUP, 0);
 
-        await Task.Delay(200);
+        // DELキーを押下
+        keybd_event(VK_BACKSPACE, 0, KEYEVENTF_KEYDOWN, 0);
+        await Task.Delay(100);
 
+        // DELキーを解放
+        keybd_event(VK_BACKSPACE, 0, KEYEVENTF_KEYUP, 0);
+        // DELキーを押下
+        keybd_event(VK_BACKSPACE, 0, KEYEVENTF_KEYDOWN, 0);
+        await Task.Delay(100);
+
+        // DELキーを解放
+        keybd_event(VK_BACKSPACE, 0, KEYEVENTF_KEYUP, 0);
         // DELキーを押下
         keybd_event(VK_BACKSPACE, 0, KEYEVENTF_KEYDOWN, 0);
         await Task.Delay(100);
