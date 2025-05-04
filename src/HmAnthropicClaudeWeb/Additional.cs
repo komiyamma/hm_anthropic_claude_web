@@ -11,8 +11,10 @@ public partial class HmAnthropicClaudeWeb
     private const byte VK_ESC = 0x1B; // ESCキーの仮想キーコード
 
     private const byte VK_SLASH = 0xBF; // スラッシュキーの仮想キーコード
+                                        // ドットキーの仮想キーコード
+    private const byte VK_DOT = 0xBE; // ドットキーの仮想キーコード
 
-    
+
     private const byte VK_BACKSPACE = 0x08;// BACKSPACEキーの仮想キーコード
 
 
@@ -46,11 +48,11 @@ public partial class HmAnthropicClaudeWeb
 
 
         // スラッシュキーを押下
-        keybd_event(VK_SLASH, 0, KEYEVENTF_KEYDOWN, 0);
+        keybd_event(VK_DOT, 0, KEYEVENTF_KEYDOWN, 0);
         await Task.Delay(100);
 
         // スラッシュキーを解放
-        keybd_event(VK_SLASH, 0, KEYEVENTF_KEYUP, 0);
+        keybd_event(VK_DOT, 0, KEYEVENTF_KEYUP, 0);
 
         // DELキーを押下
         keybd_event(VK_BACKSPACE, 0, KEYEVENTF_KEYDOWN, 0);
