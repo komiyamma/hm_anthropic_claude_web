@@ -66,6 +66,10 @@ function onPrevKeySendDecorator() {
     }
 }
 
+function useInputTransfer() {
+    return true;
+}
+
 doMain();
 
 }
