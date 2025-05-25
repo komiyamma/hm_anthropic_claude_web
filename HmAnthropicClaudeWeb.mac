@@ -5,6 +5,7 @@
  * under the MIT License
  */
 
+// q=[プロンプトへの挿入](最初の質問のみ)
 
 hidemaruversion "9.39.99";
 
