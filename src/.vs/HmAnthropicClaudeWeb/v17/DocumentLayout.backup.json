@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "G:\\repogitory\\hm_anthropic_claude_web\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B737C5A6-9F18-443A-B610-2010AFE9B2B4}|HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.csproj|G:\\repogitory\\hm_anthropic_claude_web\\src\\hmanthropicclaudeweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B737C5A6-9F18-443A-B610-2010AFE9B2B4}|HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.csproj|g:\\repogitory\\hm_anthropic_claude_web\\src\\hmanthropicclaudeweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B737C5A6-9F18-443A-B610-2010AFE9B2B4}|HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.csproj|solutionrelative:hmanthropicclaudeweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -16,9 +16,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B737C5A6-9F18-443A-B610-2010AFE9B2B4}|HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.csproj|G:\\repogitory\\hm_anthropic_claude_web\\src\\hmanthropicclaudeweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B737C5A6-9F18-443A-B610-2010AFE9B2B4}|HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.csproj|solutionrelative:hmanthropicclaudeweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B737C5A6-9F18-443A-B610-2010AFE9B2B4}|HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.csproj|g:\\repogitory\\hm_anthropic_claude_web\\src\\hmanthropicclaudeweb\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -56,8 +53,7 @@
               "RelativeToolTip": "HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAwwAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T15:28:29.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T15:28:29.221Z"
             },
             {
               "$type": "Document",
@@ -67,7 +63,7 @@
               "RelativeDocumentMoniker": "HmAnthropicClaudeWeb\\ClipBoard.cs",
               "ToolTip": "G:\\repogitory\\hm_anthropic_claude_web\\src\\HmAnthropicClaudeWeb\\ClipBoard.cs",
               "RelativeToolTip": "HmAnthropicClaudeWeb\\ClipBoard.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwGIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAIwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T15:28:28.503Z",
               "EditorCaption": ""
@@ -81,8 +77,7 @@
               "ToolTip": "G:\\repogitory\\hm_anthropic_claude_web\\src\\HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.csproj",
               "RelativeToolTip": "HmAnthropicClaudeWeb\\HmAnthropicClaudeWeb.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-03T15:28:20.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T15:28:20.218Z"
             }
           ]
         }
