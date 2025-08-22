@@ -60,6 +60,14 @@ function secondParamDecorator(baseUrl, text) {
 }
 
 function onPrevKeySendDecorator() {
+    
+    try {
+        // Copilotのインプット枠へのフォーカス。手堅いが将来変更になるかも。これがなくても一応はuseInputTransferだけでフォーカスするハズ
+        browserpanecommand({target:"_each", focusinputfield:'[aria-label="クロードにプロンプトを入力してください"]'});
+    } catch(e) {
+    }
+    
+    
     try {
         const url = browserpanecommand({target:"_each", get:"url"});
         if (url != newConvBaseUrl) {
