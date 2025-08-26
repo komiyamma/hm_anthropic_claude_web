@@ -1,6 +1,6 @@
 # HmAnthropicClaudeWeb
 
-![HmAnthropicClaudeWeb v1.1.1](https://img.shields.io/badge/HmAnthropicClaudeWeb-v1.1.1-6479ff.svg)
+![HmAnthropicClaudeWeb latest release](https://img.shields.io/github/v/release/komiyamma/hm_anthropic_claude_web)
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 ![Hidemaru 9.39](https://img.shields.io/badge/Hidemaru-v9.39-6479ff.svg)
 
