@@ -1,5 +1,5 @@
 ﻿/*
- * HmAnthropicClaudeWeb v 1.1.1.5
+ * HmAnthropicClaudeWeb v 1.1.1.9
  *
  * Copyright (c) 2025 Akitsugu Komiyama
  * under the MIT License
@@ -59,21 +59,25 @@ function secondParamDecorator(baseUrl, text) {
     return returnMinimumWindowSize();
 }
 
-function onPrevKeySendDecorator() {
-    
-    try {
-        // Copilotのインプット枠へのフォーカス。手堅いが将来変更になるかも。これがなくても一応はuseInputTransferだけでフォーカスするハズ
-        browserpanecommand({target:"_each", focusinputfield:'[aria-label="クロードにプロンプトを入力してください"]'});
-    } catch(e) {
-    }
-    
-    
-    try {
-        const url = browserpanecommand({target:"_each", get:"url"});
-        if (url != newConvBaseUrl) {
-            com.SendShiftEscSlashDelSync();
+if (isVersionAtLeast(hidemaruversion(), "9.50.04")) {
+    function onPrevKeySendDecorator() {
+        try {
+            // Copilotのインプット枠へのフォーカス。手堅いが将来変更になるかも。これがなくても一応はuseInputTransferだけでフォーカスするハズ
+            browserpanecommand({target:"_each", focusinputfield:'[aria-label="クロードにプロンプトを入力してください"]'});
+        } catch(e) {
         }
-    } catch(e) {
+    }
+
+} else {
+        
+    function onPrevKeySendDecorator() {
+        try {
+            const url = browserpanecommand({target:"_each", get:"url"});
+            if (url != newConvBaseUrl) {
+                com.SendShiftEscSlashDelSync();
+            }
+        } catch(e) {
+        }
     }
 }
 
